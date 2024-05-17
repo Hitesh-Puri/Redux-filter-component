@@ -25,7 +25,6 @@ const JobCard = ({ job }) => {
         <Typography variant="body2" color="text.secondary">
           {job.location}
         </Typography>
-        {/* <Typography variant="body2">{job.jobDetailsFromCompany}</Typography> */}
         <Typography variant="body2">
           {showFullDescription
             ? job.jobDetailsFromCompany
