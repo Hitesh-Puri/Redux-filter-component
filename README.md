@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-![](https://github.com/Hitesh-Puri/React-Dashboard/blob/main/demo.png)
+![](https://github.com/Hitesh-Puri/Redux-filter-component/blob/main/filter_UI.png)
 
 ## Objective for the Project
 
@@ -24,5 +24,12 @@ To install the necessary dependencies, follow the steps below:
 - React-redux
 - redux-toolkit
 - Material-UI
+
+**Note**
+We have to include 2 more dependencies when using material-ui libraray
+
+```npm
+npm install @emotion/react @emotion/styled
+```
 
 Feel free to explore the package.json file for a complete list of dependencies.
