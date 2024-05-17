@@ -8,8 +8,11 @@ const InfiniteScroll = () => {
     useSelector((state) => state.filter);
 
   const [data, setData] = useState([]);
-  const observer = useRef();
+  const observer = useRef(); // For keeping the refrence of last card component.
 
+  /**
+   * Keep track of the last job card on the screen, after that hits loadMore function
+   */
   const lastJobElementRef = useCallback(
     (node) => {
       if (observer.current) observer.current.disconnect();
@@ -23,6 +26,9 @@ const InfiniteScroll = () => {
     [data.length]
   );
 
+  /**
+   * Filters data having null values
+   */
   const filteredData = filterData.filter((job) => {
     const meetsMinExp = minExp === null || job.minExp >= minExp;
     const meetsCompanyName = companyName
@@ -49,10 +55,16 @@ const InfiniteScroll = () => {
     );
   });
 
+  /**
+   * To render whenever the state updates upon filtering
+   */
   useEffect(() => {
     setData(filteredData.slice(0, 10));
   }, [minExp, companyName, location, remote, role, minBasePay]);
 
+  /**
+   * Loads data after reaching to the bottom of the screen or last job card
+   */
   const loadMoreData = () => {
     const existingDataLength = data.length;
     const newData = filteredData.slice(

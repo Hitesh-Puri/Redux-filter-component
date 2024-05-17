@@ -21,6 +21,9 @@ const FilterPanel = () => {
   const { minExp, companyName, location, remote, role, minBasePay } =
     useSelector((state) => state.filter);
 
+  /**
+   * OnChange handlers for various input text field
+   */
   const handleMinExpChange = (e) => {
     const value = e.target.value ? parseInt(e.target.value) : null;
     dispatch(setMinExp(value));

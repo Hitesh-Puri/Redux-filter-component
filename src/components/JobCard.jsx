@@ -4,10 +4,16 @@ import { Card, CardContent, Typography, Button } from "@mui/material";
 const JobCard = ({ job }) => {
   const [showFullDescription, setShowFullDescription] = useState(false);
 
+  /**
+   * Handles show more toggle functionality
+   */
   const handleDescriptionToggle = () => {
     setShowFullDescription(!showFullDescription);
   };
 
+  /**
+   * Truncates the description upto 100 words
+   */
   const truncatedDescription = `${job.jobDetailsFromCompany.substring(
     0,
     100
