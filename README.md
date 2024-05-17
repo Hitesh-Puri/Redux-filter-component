@@ -4,6 +4,8 @@
 
 ![](https://github.com/Hitesh-Puri/Redux-filter-component/blob/main/filter_UI.png)
 
+[Live Demo](https://applicationfilter.netlify.app/)
+
 ## Objective for the Project
 
 Create a candidate application platform that allows users to view job listings, filter jobs based on various criteria, and implement infinite scroll for a seamless browsing experience.
